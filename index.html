@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraction Calculator</title>
+</head>
+<body>
+    <h1>Fraction Calculator</h1>
+    <form action="" method="post">
+        <label for="numerator1">Fraction 1:</label>
+        <input type="number" name="numeratorOne" required>
+        /
+        <input type="number" name="denominatorOne" required>
+        <br>
+
+        <label for="operation">Operator:</label>
+        <select name="operation" required>
+            <option value="addition">+</option>
+            <option value="subtraction">-</option>
+            <option value="multiplication">*</option>
+            <option value="division">/</option>
+        </select>
+        <br>
+        <label for="numerator2">Fraction 2:</label>
+        <input type="number" name="numeratorTwo" required>
+        /
+        <input type="number" name="denominatorTwo" required>
+        <br>
+        <input type="submit" value="calculate">
+    </form>
+</body>
+</html>
