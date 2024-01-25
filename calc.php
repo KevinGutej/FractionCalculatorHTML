@@ -18,12 +18,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             break;
 
         case "subtraction":
+            $numerator_result = $numeratorOne * $denominatorTwo - $numeratorTwo * $denominatorOne;
+            $denominator_result = $denominatorOne * $denominatorTwo;
             break;
 
         case "multiplication":
+            $numerator_result = $numeratorOne * $numeratorTwo;
+            $denominator_result = $denominatorOne * $denominatorTwo;
             break;
 
         case "division":
+            $numerator_result = $numeratorOne * $denominatorTwo;
+            $denominator_result = $denominatorOne * $numeratorTwo;
             break;
+
+            default:
+                die("Invalid operation");
         }
 }
