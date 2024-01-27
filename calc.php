@@ -32,7 +32,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $denominator_result = $denominatorOne * $numeratorTwo;
             break;
 
-            default:
-                die("Invalid operation");
-        }
+        default:
+            die("Invalid operation");
+    }
+
+    $GreatestCommonDivisor = GreatestCommonDivisor($numerator_result, $denominator_result);
+    $numerator_result /= $GreatestCommonDivisor;
+    $denominator_result /= $GreatestCommonDivisor;
+
+    echo "The result: $numerator_result / $denominator_result";
+}
+
+function GreatestCommonDivisor($a, $b)
+{
+    while ($b != 0) {
+        $temp = $b;
+        $b = $a % $b;
+        $a = $temp;
+    }
+    return $a;
 }
